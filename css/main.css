@@ -1,0 +1,110 @@
+body {
+  font-family: system-ui;
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+.container .input {
+  min-height: 100vh;
+  flex: 10%;
+  background: #232529;
+}
+.container .input ul {
+  padding: 12px;
+}
+.container .input li.title {
+  font-size: 100%;
+}
+.container .input li {
+  list-style: none;
+  font-size: 12px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  padding: 12px 12px;
+}
+.container .input li:hover {
+  background: #1B9BD1;
+}
+.container .input li.list-title:hover {
+  background: initial;
+}
+.container .output {
+  padding-left: 8px;
+  min-height: 100vh;
+  flex: 40%;
+  background: #1B1D21;
+}
+.container .output-json {
+  min-height: 100vh;
+  flex: 40%;
+  background: #232529;
+  font-family: Monaco;
+  font-size: 12px;
+  overflow: hidden;
+  max-width: 700px;
+}
+.container .output-json #output-monospace {
+  margin: 8px;
+}
+
+.string {
+  color: #D1D2D3;
+}
+
+.number {
+  color: darkorange;
+}
+
+.boolean {
+  color: #1D9BD1;
+}
+
+.null {
+  color: magenta;
+}
+
+.key {
+  color: #1D9BD1;
+}
+
+.output-block {
+  padding: 2px;
+}
+.output-block .output-text-block {
+  font-weight: 400;
+}
+.output-block .output-button-block {
+  margin: 8px 0;
+}
+.output-block .output-context-block .context {
+  color: #D1D2D3;
+  font-weight: 200;
+}
+.output-block hr {
+  border: 1px solid #35373B;
+}
+.output-block .link-button {
+  text-decoration: none;
+  border: 1px solid black;
+  background: #fff;
+  padding: 8px 12px;
+  margin: 12px 0px;
+  border-radius: 4px;
+  color: #fff;
+  background: none;
+  border: 1px solid #35373B;
+}
+
+.output-block:hover {
+  border: 1px solid #35373B;
+}
+
+/*# sourceMappingURL=main.css.map */

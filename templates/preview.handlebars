@@ -1,0 +1,37 @@
+<div class="output-blocks">
+  {{#each blocks as |block|}}
+    <div class='output-block' data-type={{block.type}} id='{{block.blockID}}'>
+    {{#if (eq block.type 'section')}}
+      <p class="output-text-block">{{block.text.text}}</p>
+    {{/if}}
+    {{#if (eq block.type 'divider')}}
+      <hr class='output-divider-block'/>
+    {{/if}}
+    {{#if (eq block.type 'header')}}
+      <strong class='output-header-block'>{{block.text.text}}</strong>
+    {{/if}}
+    {{#if (eq block.type 'image')}}
+      <div class="output-image-block">
+        <p>{{block.title.text}}</p>
+        <img src="{{block.image_url}}" alt="{{block.alt_text}}">
+      </div>
+    {{/if}}
+    {{#if (eq block.type 'context')}}
+      <div class="output-context-block">
+        {{#each block.elements as |element|}}
+          <p class='context'>{{element.text}}</p>
+        {{/each}}
+      </div>
+    {{/if}}
+    {{#if (eq block.type 'actions')}}
+      <div class="output-button-block">
+        {{#each block.elements as |element|}}
+          {{#if (eq element.type 'button')}}
+            <a class="link-button" href="{{element.url}}" target="_blank">{{element.text.text}}</a>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/if}}
+    </div>
+  {{/each}}
+</div>

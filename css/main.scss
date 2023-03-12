@@ -1,0 +1,101 @@
+$slackGrey: #232529;
+$slackDark: #1B1D21;
+$skyBlue: #1B9BD1;
+$white: #fff;
+body{
+  font-family: system-ui;
+  color: $white;
+  font-size: 15px;
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  .input{
+    min-height: 100vh;
+    flex: 10%;
+    background: $slackGrey;
+    ul{
+      padding: 12px;
+    }
+    li.title{
+      font-size: 100%;
+    }
+    li{
+      list-style: none;
+      font-size: 12px;
+      margin-bottom: 12px;
+      margin-right: 12px;
+      padding: 12px 12px;
+    }
+    li:hover{
+      background: $skyBlue;
+    }
+    li.list-title:hover{
+      background: initial;
+    }
+  }
+  .output{
+    padding-left: 8px;
+    min-height: 100vh;
+    flex: 40%;
+    background: $slackDark;
+  }
+  .output-json{
+    #output-monospace{
+      margin: 8px;
+    }
+    min-height: 100vh;
+    flex: 40%;
+    background: $slackGrey;
+    font-family: Monaco;
+    font-size: 12px;
+    overflow: hidden;
+    max-width: 700px;
+  }
+}
+
+$stringBlue: #1D9BD1;
+$stringWhite: #D1D2D3;
+$borderGrey: #35373B;
+.string { color: $stringWhite; }
+.number { color: darkorange; }
+.boolean { color: $stringBlue; }
+.null { color: magenta; }
+.key { color: $stringBlue; }
+.output-block{
+  padding: 2px;
+  .output-text-block{
+    font-weight: 400;
+  }
+  .output-button-block{
+    margin: 8px 0;
+  }
+  .output-context-block{
+    .context{
+      color: $stringWhite;
+      font-weight: 200;
+    }
+    
+  }
+  hr{
+    border: 1px solid $borderGrey;
+  }
+  .link-button{
+    text-decoration: none;
+    border: 1px solid black;
+    background: #fff;
+    padding: 8px 12px;
+    margin: 12px 0px;
+    border-radius: 4px;
+    color: $white;
+    background: none;
+    border: 1px solid $borderGrey;
+  }
+}
+.output-block:hover{
+  border: 1px solid $borderGrey;
+}
