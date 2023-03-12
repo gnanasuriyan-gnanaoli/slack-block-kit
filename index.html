@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/handlebars.min-v4.7.7.js"></script>
+    <title>Slack block kit</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <ul>
+          <li class='list-title'>Section</li>
+          <li class='block' id='plain-text'>+ Plain text</li>
+          <li class='block' id='divider'>+ Divider</li>
+          <li class='block' id='header'>+ Header</li>
+          <li class='block' id='image'>+ Image</li>
+          <li class='block' id='context'>+ Context</li>
+          <li class='block' id='link-button'>+ Link Button</li>
+          <li id='clear-blocks'>🗑️ Clear blocks</li>
+        </ul>
+      </div>
+      <div class="output">
+      </div>
+      <div class="output-json">
+        <pre id="output-monospace">
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module" src='js/init.js'></script>
+<script src="js/precompiled/preview.precompiled.js"></script>
